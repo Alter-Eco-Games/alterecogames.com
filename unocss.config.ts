@@ -4,15 +4,27 @@ import {
   presetIcons,
   presetUno,
   presetWebFonts,
-  // transformerDirectives,
-  // transformerVariantGroup,
 } from 'unocss'
 
 export default defineConfig({
-  shortcuts: [
-    ['btn', 'px-4 py-1 rounded inline-block bg-teal-600 text-white cursor-pointer hover:bg-teal-700 disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50'],
-    ['icon-btn', 'text-[0.9em] inline-block cursor-pointer select-none opacity-75 transition duration-200 ease-in-out hover:opacity-100 hover:text-teal-600 !outline-none'],
-  ],
+  shortcuts: [],
+  theme: {
+    colors: {
+      accent: {
+        200: 'hsl(220, 7%, 44%)',
+        300: 'hsl(220, 7%, 49%)',
+        400: 'hsl(220, 7%, 54%)',
+        500: 'hsl(220, 7%, 59%)',
+      },
+      brand: {
+        primary: 'hsl(181, 48%, 45%)',
+        secondary: 'hsl(194, 39%, 62%)',
+      },
+      footer: {
+        bg: 'hsl(0, 0%, 94%)',
+      },
+    },
+  },
   presets: [
     presetUno(),
     presetAttributify(),
@@ -21,15 +33,11 @@ export default defineConfig({
       warn: true,
     }),
     presetWebFonts({
+      provider: 'google',
       fonts: {
-        sans: 'DM Sans',
-        serif: 'DM Serif Display',
-        mono: 'DM Mono',
+        sans: 'Noto sans',
+        serif: 'Oswald',
       },
     }),
   ],
-  // transformers: [
-  //   transformerDirectives(),
-  //   transformerVariantGroup(),
-  // ],
 })
