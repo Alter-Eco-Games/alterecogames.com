@@ -1,16 +1,16 @@
 /*
 route
 
-name: index
+name: contact
 meta:
-  navbar: false
+  navbar: true
 */
-
 <script setup lang="ts">
+
 </script>
 
 <template>
   <div>
-    Index
+    contact
   </div>
 </template>

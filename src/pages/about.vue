@@ -1,16 +1,17 @@
 /*
 route
 
-name: index
+name: about
 meta:
-  navbar: false
+  navbar: true
 */
 
 <script setup lang="ts">
+
 </script>
 
 <template>
   <div>
-    Index
+    About
   </div>
 </template>

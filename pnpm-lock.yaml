@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@antfu/eslint-config': ^0.25.2
   '@iconify-json/carbon': ^1.1.6
+  '@iconify-json/fa6-brands': ^1.1.4
   '@types/node': ^18.0.3
   '@unocss/reset': ^0.44.1
   '@vitejs/plugin-vue': ^3.0.0
@@ -23,6 +24,7 @@ specifiers:
   vue-tsc: ^0.38.5
 
 dependencies:
+  '@iconify-json/fa6-brands': 1.1.4
   '@vueuse/core': 8.9.2_vue@3.2.37
   vue: 3.2.37
   vue-router: 4.1.2_vue@3.2.37
@@ -232,9 +234,14 @@ packages:
       '@iconify/types': 1.1.0
     dev: true
 
+  /@iconify-json/fa6-brands/1.1.4:
+    resolution: {integrity: sha512-4I5UwiAhQiuigmRMj27AyGYXmAy45fpklTcElM/dUOTrNKV98CxvCsfyWxsjhvO2OFqI6bmvfkZX/6DWFcih+g==}
+    dependencies:
+      '@iconify/types': 1.1.0
+    dev: false
+
   /@iconify/types/1.1.0:
     resolution: {integrity: sha512-Jh0llaK2LRXQoYsorIH8maClebsnzTcve+7U3rQUSnC11X4jtPnFuyatqFLvMxZ8MLG8dB4zfHsbPfuvxluONw==}
-    dev: true
 
   /@iconify/utils/1.0.33:
     resolution: {integrity: sha512-vGeAqo7aGPxOQmGdVoXFUOuyN+0V7Lcrx2EvaiRjxUD1x6Om0Tvq2bdm7E24l2Pz++4S0mWMCVFXe/17EtKImQ==}

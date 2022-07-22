@@ -1,16 +1,20 @@
 /*
 route
 
-name: index
+name: games
 meta:
-  navbar: false
+  navbar: true
 */
-
 <script setup lang="ts">
+
 </script>
 
 <template>
   <div>
-    Index
+    Games
   </div>
 </template>
+
+<style scoped>
+
+</style>
