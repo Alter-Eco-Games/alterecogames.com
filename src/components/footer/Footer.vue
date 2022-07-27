@@ -10,7 +10,7 @@ const currentYear = computed(() => new Date().getFullYear())
     <div flex flex-col px-24>
       <div flex justify-between mt-16>
         <div>
-          <h3 font-serif text-6 style="letter-spacing:0.1em">
+          <h3 font-serif text-6 letter-1>
             alter eco games
           </h3>
           <p text-3 text-accent-500>

@@ -9,7 +9,7 @@ const props = defineProps<Props>()
 
 <template>
   <div flex flex-col text-accent-500 text-3 text-left>
-    <h4 text-accent-300 text-3 mb-1 style="letter-spacing: 0.1em;">
+    <h4 text-accent-300 text-3 mb-1 letter-1>
       {{ title }}
     </h4>
     <ul v-if="typeof content !== 'string'">

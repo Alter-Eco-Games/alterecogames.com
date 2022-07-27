@@ -4,7 +4,7 @@
 
 <template>
   <div flex flex-col>
-    <h4 text="center 3 accennt-300" mb-1 style="letter-spacing: 0.1em;">
+    <h4 text="center 3 accennt-300" mb-1 letter-1>
       FOLLOW US
     </h4>
     <div grid grid-rows-2 grid-cols-2 gap-2 text-6 text-brand-primary>
