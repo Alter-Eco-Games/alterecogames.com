@@ -1,5 +1,6 @@
 import {
   defineConfig,
+  toEscapedSelector as e,
   presetAttributify,
   presetIcons,
   presetUno,
@@ -7,7 +8,26 @@ import {
 } from 'unocss'
 
 export default defineConfig({
-  shortcuts: [],
+  rules: [
+    [/^letter-(.+)$/, ([, name], { rawSelector }) => {
+      // remove tag end if there
+      if (name.includes('>'))
+        name = name.substring(0, name.length - 1)
+
+      // discard mismatched rules
+      if (/[a-zA-Z]+$/.test(name))
+        return
+
+      const selector = e(rawSelector)
+      // return a string instead of an object
+      return `
+      ${selector} {
+        letter-spacing: 0.${name}em;
+      }`
+    }],
+  ],
+  shortcuts: [
+  ],
   theme: {
     colors: {
       accent: {
