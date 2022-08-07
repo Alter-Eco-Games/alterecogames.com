@@ -1,16 +1,10 @@
-/*
-route
-
-name: index
-meta:
-  navbar: false
-*/
-
 <script setup lang="ts">
+
 </script>
 
 <template>
   <div>
-    Index
+    {{ $t('home') }}
   </div>
 </template>
+

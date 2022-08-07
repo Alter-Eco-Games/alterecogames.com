@@ -1,13 +1,12 @@
-/// <reference types="vitest" />
-
 import path from 'path'
 import { defineConfig } from 'vite'
-import Vue from '@vitejs/plugin-vue'
-import Pages from 'vite-plugin-pages'
+import vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
+import vueI18n from '@intlify/vite-plugin-vue-i18n'
 import Unocss from 'unocss/vite'
 
+// https://vitejs.dev/config/
 export default defineConfig({
   resolve: {
     alias: {
@@ -15,40 +14,39 @@ export default defineConfig({
     },
   },
   plugins: [
-    Vue({
+    vue({
       reactivityTransform: true,
     }),
-
-    // https://github.com/hannoeru/vite-plugin-pages
-    Pages(),
-
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
       imports: [
         'vue',
-        'vue/macros',
         'vue-router',
+        'vue-i18n',
+        'vue/macros',
+        '@vueuse/head',
         '@vueuse/core',
       ],
-      dts: true,
-      dirs: [
-        './src/composables',
-      ],
+      dts: 'src/auto-imports.d.ts',
+      dirs: ['src/composables', 'src/store'],
       vueTemplate: true,
     }),
-
-    // https://github.com/antfu/vite-plugin-components
+    // https://github.com/antfu/unplugin-vue-components
     Components({
-      dts: true,
+      // allow auto load markdown components under `./src/components/`
+      extensions: ['vue'],
+      // allow auto import and register components used in markdown
+      include: [/\.vue$/, /\.vue\?vue/],
+      dts: 'src/components.d.ts',
     }),
-
     // https://github.com/antfu/unocss
     // see unocss.config.ts for config
     Unocss(),
+    // https://github.com/intlify/bundle-tools/tree/main/packages/vite-plugin-vue-i18n
+    vueI18n({
+      runtimeOnly: true,
+      compositionOnly: true,
+      include: [path.resolve(__dirname, 'locales/**')],
+    }),
   ],
-
-  // https://github.com/vitest-dev/vitest
-  test: {
-    environment: 'jsdom',
-  },
 })

@@ -1,5 +1,7 @@
+<script setup lang="ts">
+</script>
+
 <template>
-  <Navbar />
-  <router-view min-h-screen />
-  <Footer />
+  <router-view />
 </template>
+

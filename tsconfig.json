@@ -2,21 +2,21 @@
   "compilerOptions": {
     "baseUrl": ".",
     "module": "ESNext",
-    "target": "es2016",
+    "target": "ESNext",
     "lib": ["DOM", "ESNext"],
     "strict": true,
-    "jsx": "preserve",
     "esModuleInterop": true,
+    "jsx": "preserve",
     "skipLibCheck": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "noUnusedLocals": false,
+    "noUnusedLocals": true,
     "strictNullChecks": true,
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
     "types": [
       "vite/client",
-      "vite-plugin-pages/client"
+      "vue/ref-macros",
     ],
     "paths": {
       "~/*": ["src/*"]
