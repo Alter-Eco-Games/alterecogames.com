@@ -1,10 +1,18 @@
-<script setup lang="ts">
+<route lang="json">
+{
+  "meta": {
+    "desktopNav": true,
+    "mobileNav": true
+  }
+}
+</route>
 
+<script setup lang="ts">
+const title = useTitle('Alter eco | Home')
 </script>
 
 <template>
   <div>
-    {{ $t('home') }}
+    {{ $t("home") }}
   </div>
 </template>
-

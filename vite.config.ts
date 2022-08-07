@@ -1,6 +1,7 @@
 import path from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import Pages from 'vite-plugin-pages'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import vueI18n from '@intlify/vite-plugin-vue-i18n'
@@ -17,6 +18,8 @@ export default defineConfig({
     vue({
       reactivityTransform: true,
     }),
+    // https://github.com/hannoeru/vite-plugin-pages
+    Pages(),
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
       imports: [
@@ -27,17 +30,13 @@ export default defineConfig({
         '@vueuse/head',
         '@vueuse/core',
       ],
-      dts: 'src/auto-imports.d.ts',
+      dts: true,
       dirs: ['src/composables', 'src/store'],
       vueTemplate: true,
     }),
     // https://github.com/antfu/unplugin-vue-components
     Components({
-      // allow auto load markdown components under `./src/components/`
-      extensions: ['vue'],
-      // allow auto import and register components used in markdown
-      include: [/\.vue$/, /\.vue\?vue/],
-      dts: 'src/components.d.ts',
+      dts: true,
     }),
     // https://github.com/antfu/unocss
     // see unocss.config.ts for config
@@ -46,7 +45,7 @@ export default defineConfig({
     vueI18n({
       runtimeOnly: true,
       compositionOnly: true,
-      include: [path.resolve(__dirname, 'locales/**')],
+      include: [path.resolve(__dirname, '~/locales/**')],
     }),
   ],
 })
