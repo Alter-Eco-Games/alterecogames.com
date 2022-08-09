@@ -1,15 +1,17 @@
 <route lang="json">
 {
-  "name":"home"
+  "meta":{
+    "invisable":true
+  }
 }
 </route>
 
 <script setup lang="ts">
-const title = useTitle('Alter eco | Home')
+
 </script>
 
 <template>
   <div>
-    {{ $t("home") }}
+    charities id
   </div>
 </template>

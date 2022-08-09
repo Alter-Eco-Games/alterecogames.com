@@ -1,3 +1,11 @@
+<route lang="json">
+{
+  "meta":{
+    "invisable":true
+  }
+}
+</route>
+
 <script setup lang="ts">
 </script>
 
