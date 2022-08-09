@@ -12,6 +12,7 @@ import 'uno.css'
 
 declare module 'vue-router' {
   interface RouteMeta {
+    order: number
     invisable?: boolean
   }
 }

@@ -1,6 +1,9 @@
 <route lang="json">
 {
-  "name":"home"
+  "name":"home",
+  "meta":{
+    "order": 1
+  }
 }
 </route>
 

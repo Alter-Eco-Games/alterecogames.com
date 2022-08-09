@@ -1,6 +1,7 @@
 <route lang="json">
 {
   "meta":{
+    "order": -1,
     "invisable":true
   }
 }

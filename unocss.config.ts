@@ -33,6 +33,7 @@ export default defineConfig({
     colors: {
       nav: {
         bg: '#D9D9D9',
+        popup: '#efefef',
         text: '#818792',
       },
       brand: {
@@ -58,5 +59,5 @@ export default defineConfig({
     }),
   ],
   transformers: [transformerDirectives(), transformerVariantGroup()],
-  safelist: 'prose prose-sm m-auto text-left i-carbon-game-console i-carbon-home i-carbon-debug'.split(' '),
+  safelist: 'prose prose-sm m-auto text-left i-carbon-game-console i-carbon-home i-carbon-debug i-carbon-close i-carbon-menu'.split(' '),
 })
