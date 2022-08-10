@@ -31,6 +31,13 @@ export default defineConfig({
   ],
   theme: {
     colors: {
+      footer: {
+        bg: '#efefef',
+        title: '#747A86',
+        text: '#8F949E',
+        b: '#BDBDBD',
+        icons: '#D9D9D9',
+      },
       nav: {
         bg: '#D9D9D9',
         popup: '#efefef',
