@@ -42,11 +42,11 @@ const showIndicator = computed(() => routes.map(route => route.active).some(x =>
   --brand-colour: #31A5A7;
   --background-colour: #D9D9D9;
   --icon-size: 1rem;
-
 }
 .navigation .icons{
   position: fixed;
   display: flex;
+  z-index: 5;
   justify-content: center;
   align-items: center;
   width: 100vw;
@@ -90,32 +90,31 @@ const showIndicator = computed(() => routes.map(route => route.active).some(x =>
 
 .indicator{
   position: absolute;
-  top: -50%;
+  top: -35px;
   width: var(--height);
   height: var(--height);
   background-color: var(--background-colour);
   border-radius: 50%;
-  border: 6px solid #fff;
+  border: 6px solid var(--background-colour);
   transition: 0.5s;
 }
 
 .indicator::before, .indicator::after{
   position: absolute;
   content: '';
-  top: 50%;
-  width: 20px;
-  height: 20px;
+  top: 0px;
+  width: 30px;
+  height: 30px;
   background: transparent;
+  border-radius: 50%;
 }
 .indicator::before{
-  left: -22px;
-  border-top-right-radius: 20px;
-  box-shadow: 1px -10px 0 0 #fff;
+  left: -34px;
+  box-shadow: 15px 18px var(--background-colour);
 }
 .indicator::after{
-  right: -22px;
-  border-top-left-radius: 20px;
-  box-shadow: -1px -10px 0 0 #fff;
+  right: -34px;
+  box-shadow: -15px 18px var(--background-colour);
 }
 
 .navigation .icons li:nth-child(1).active ~ .indicator{
