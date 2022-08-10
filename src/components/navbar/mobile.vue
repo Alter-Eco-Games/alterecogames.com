@@ -1,28 +1,30 @@
 <script setup lang="ts">
+import { storeToRefs } from 'pinia'
 import { mobileNavRoutes, useNavbar } from '~/composables'
+
+const store = useStore()
+const { mobileNavOpen } = storeToRefs(store)
 
 const { routes, router } = useNavbar(mobileNavRoutes)
 
-const isOpen = $ref(false)
-
-const menuIcon = computed(() => isOpen ? 'i-carbon-close' : 'i-carbon-menu')
+const menuIcon = computed(() => mobileNavOpen.value ? 'i-carbon-close' : 'i-carbon-menu')
 const allRoutes = computed(() => router.getRoutes().filter(route => !route.meta.invisable).sort((a, b) => a.meta.order - b.meta.order))
 const showIndicator = computed(() => routes.map(route => route.active).some(x => !!x))
 </script>
 
 <template>
   <div class="navigation">
-    <div flex flex-col h-auto p-8 w-screen z-1 :class="{ 'bg-nav-popup': isOpen, 'absolute': isOpen, 'h-screen': isOpen }">
-      <div :class="menuIcon" @click="isOpen = !isOpen" />
-      <ul v-if="isOpen" flex flex-col h-screen justify-around items-center font-serif lsp-1 text-nav-text uppercase text-8 font-400>
+    <div flex flex-col h-auto p-8 w-screen z-1 :class="{ 'bg-nav-popup': mobileNavOpen, 'absolute': mobileNavOpen, 'h-screen': mobileNavOpen }">
+      <div :class="menuIcon" @click="mobileNavOpen = !mobileNavOpen" />
+      <ul v-if="mobileNavOpen" flex flex-col h-screen justify-around items-center font-serif lsp-1 text-nav-text uppercase text-8 font-400>
         <li v-for="route in allRoutes" :key="route.path">
-          <router-link :to="route.path" @click="isOpen = false">
+          <router-link :to="route.path" @click="mobileNavOpen = false">
             {{ route.name }}
           </router-link>
         </li>
       </ul>
     </div>
-    <ul v-if="!isOpen" class="icons">
+    <ul v-if="!mobileNavOpen" class="icons">
       <li v-for="route, idx in routes" :id="route.name" :key="idx" :class="{ active: route.active }">
         <router-link :to="route.path">
           <div :class="route.icon" class="icon" />
