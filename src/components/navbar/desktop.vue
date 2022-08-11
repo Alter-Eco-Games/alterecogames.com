@@ -6,9 +6,9 @@ const { routes } = useNavbar(desktopNavRoutes)
 
 <template>
   <div flex p-8 font-serif lsp-1>
-    <ul flex w-screen>
+    <ul flex w-screen items-center>
       <li mr-a>
-        <router-link to="/" text-black text-8>
+        <router-link to="/" text-black text-8 truncate lt-md:text-6>
           Alter eco
         </router-link>
       </li>
