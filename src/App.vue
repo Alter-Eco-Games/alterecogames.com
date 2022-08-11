@@ -7,7 +7,7 @@ const { mobileNavOpen } = storeToRefs(store)
 
 <template>
   <Navbar />
-  <router-view h-screen />
+  <router-view />
   <Footer v-if="!mobileNavOpen" />
 </template>
 

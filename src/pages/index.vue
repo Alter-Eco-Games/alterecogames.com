@@ -16,7 +16,7 @@ const isMobile = breakpoints.smaller('sm')
 </script>
 
 <template>
-  <div flex justify-center items-start mt-40 px-8 lt-sm:flex-col lt-sm:justify-start lt-sm:mt-0 lt-sm:items-center>
+  <div flex justify-center items-start mt-40 px-8 lt-sm:flex-col lt-sm:justify-start lt-sm:mt-0 lt-sm:items-center mb-36>
     <div mr-32 lt-sm:mr-0 lt-md:mr-16 lt-lg:mr-20>
       <div mb-24 lt-sm:mb-16>
         <h1 font-serif lsp-1 text-16 truncate lt-sm:text-8 lt-lg:text-10 lt-md:text-7>

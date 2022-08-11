@@ -8,7 +8,7 @@ const games = ['game 1', 'game 2', 'game 3']
 </script>
 
 <template>
-  <footer bg-footer-bg text-footer-text px-24 py-16 pb-8 lt-md:px-8 lt-md:py-4>
+  <footer bg-footer-bg text-footer-text px-24 py-16 pb-8 lt-md:px-8 lt-md:py-4 lt-lg:px-8>
     <div flex justify-between lt-md:flex-col lt-md:items-start>
       <div>
         <h1 text-footer-title font-serif lsp-1 text-6 mb-2>
@@ -24,7 +24,7 @@ const games = ['game 1', 'game 2', 'game 3']
       <FooterFollow lt-md:mt-12 :show="breakpoints.md.value" />
     </div>
     <div text-3 border-t-1 border-t-footer-b mt-24 lt-md:mt-12 lt-md:mb-8 lt-sm:mb-24>
-      © Alter eco games. all right reserved {{ new Date().getFullYear() }}
+      © Alter eco games. all right reserved 2022 - Present
     </div>
   </footer>
 </template>
