@@ -12,6 +12,6 @@
 
 <template>
   <div>
-    bugs
+    <WIP />
   </div>
 </template>

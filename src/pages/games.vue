@@ -12,6 +12,6 @@
 
 <template>
   <div>
-    games
+    <WIP />
   </div>
 </template>

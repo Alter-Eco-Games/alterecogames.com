@@ -12,6 +12,6 @@
 
 <template>
   <div>
-    About
+    <WIP />
   </div>
 </template>

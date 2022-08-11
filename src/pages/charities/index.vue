@@ -12,6 +12,6 @@
 
 <template>
   <div>
-    all charities
+    <WIP />
   </div>
 </template>

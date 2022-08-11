@@ -12,7 +12,7 @@
 
 <template>
   <div>
-    contact
+    <WIP />
   </div>
 </template>
 
