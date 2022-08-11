@@ -7,6 +7,7 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    Button: typeof import('./src/components/Button.vue')['default']
     Desktop: typeof import('./src/components/navbar/desktop.vue')['default']
     Footer: typeof import('./src/components/footer/footer.vue')['default']
     FooterCol: typeof import('./src/components/footer/footerCol.vue')['default']
@@ -15,5 +16,6 @@ declare module '@vue/runtime-core' {
     Navbar: typeof import('./src/components/navbar/navbar.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    WIP: typeof import('./src/components/WIP.vue')['default']
   }
 }

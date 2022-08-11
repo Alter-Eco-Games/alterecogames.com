@@ -29,8 +29,13 @@ export default defineConfig({
       }`
     }],
   ],
+  shortcuts: {
+    'btn-primary': 'bg-brand-primary text-white py-2 px-4 rd-2 min-w-40 shadow-slate shadow-md',
+    'btn-secondary': 'bg-brand-secondary text-white py-2 px-4 rd-2 min-w-40 shadow-slate shadow-md',
+  },
   theme: {
     colors: {
+      400: '#818792',
       footer: {
         bg: '#efefef',
         title: '#747A86',
