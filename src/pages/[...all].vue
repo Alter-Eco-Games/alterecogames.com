@@ -8,10 +8,18 @@
 </route>
 
 <script setup lang="ts">
+import { breakpointsTailwind } from '@vueuse/core'
+
+const breakpoints = useBreakpoints(breakpointsTailwind)
+const isMobile = breakpoints.smaller('sm')
 </script>
 
 <template>
-  <div w-screen flex items-center justify-center>
-    <img src="../assets/404.svg" w-3xl>
+  <div flex flex-col px-8>
+    <h1 v-if="isMobile" lsp-1 font-serif text-6 text-center mb-21>
+      Page not found
+    </h1>
+    <img v-if="isMobile" src="../assets/mobile-page-not-found.svg">
+    <img v-else src="../assets/page-not-found.svg" mx-auto mt-24>
   </div>
 </template>
