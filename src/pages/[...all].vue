@@ -9,9 +9,11 @@
 
 <script setup lang="ts">
 import { breakpointsTailwind } from '@vueuse/core'
-import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
+import { useI18nTitle } from '~/composables'
+
+const { t } = useI18nTitle('home')
+
 const breakpoints = useBreakpoints(breakpointsTailwind)
 const isMobile = breakpoints.smaller('sm')
 </script>

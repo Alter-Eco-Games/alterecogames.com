@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { breakpointsTailwind } from '@vueuse/core'
-import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
 const breakpoints = useBreakpoints(breakpointsTailwind)

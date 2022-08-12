@@ -7,7 +7,9 @@
 </route>
 
 <script setup lang="ts">
+import { useI18nTitle } from '~/composables'
 
+const { t } = useI18nTitle('contact')
 </script>
 
 <template>
