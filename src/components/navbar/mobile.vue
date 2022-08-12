@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
+import { useI18n } from 'vue-i18n'
 import { mobileNavRoutes, useNavbar } from '~/composables'
 
+const { t } = useI18n()
 const store = useStore()
 const { mobileNavOpen } = storeToRefs(store)
 
@@ -19,7 +21,7 @@ const showIndicator = computed(() => routes.map(route => route.active).some(x =>
       <ul v-if="mobileNavOpen" flex flex-col h-screen justify-around items-center font-serif lsp-1 text-nav-text uppercase text-8 font-400>
         <li v-for="route in allRoutes" :key="route.path">
           <router-link :to="route.path" @click="mobileNavOpen = false">
-            {{ route.name }}
+            {{ t(`${route.name?.toString()}.title`) }}
           </router-link>
         </li>
       </ul>

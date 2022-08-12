@@ -1,6 +1,8 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
 import { desktopNavRoutes, useNavbar } from '~/composables'
 
+const { t } = useI18n()
 const { routes } = useNavbar(desktopNavRoutes)
 </script>
 
@@ -14,7 +16,7 @@ const { routes } = useNavbar(desktopNavRoutes)
       </li>
       <li v-for="route, idx in routes" :key="idx" px-16 text-5 text-nav-text>
         <router-link :to="route.path" :class="{ 'text-brand-primary': route.active }">
-          {{ route.name }}
+          {{ t(`${route.name}.title`) }}
         </router-link>
       </li>
     </ul>

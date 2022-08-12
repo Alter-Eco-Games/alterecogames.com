@@ -9,7 +9,9 @@
 
 <script setup lang="ts">
 import { breakpointsTailwind } from '@vueuse/core'
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const breakpoints = useBreakpoints(breakpointsTailwind)
 const isMobile = breakpoints.smaller('sm')
 </script>
@@ -17,7 +19,7 @@ const isMobile = breakpoints.smaller('sm')
 <template>
   <div flex flex-col px-8>
     <h1 v-if="isMobile" lsp-1 font-serif text-6 text-center mb-21>
-      Page not found
+      {{ t('404.pageTitle') }}
     </h1>
     <img v-if="isMobile" src="../assets/mobile-page-not-found.svg">
     <img v-else src="../assets/page-not-found.svg" mx-auto mt-24>

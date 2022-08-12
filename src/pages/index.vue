@@ -9,8 +9,9 @@
 
 <script setup lang="ts">
 import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'
+import { useI18n } from 'vue-i18n'
 
-const title = useTitle('Alter eco | Home')
+const { t } = useI18n()
 const breakpoints = useBreakpoints(breakpointsTailwind)
 const isMobile = breakpoints.smaller('sm')
 </script>
@@ -20,21 +21,21 @@ const isMobile = breakpoints.smaller('sm')
     <div mr-32 lt-sm:mr-0 lt-md:mr-16 lt-lg:mr-20>
       <div mb-24 lt-sm:mb-16>
         <h1 font-serif lsp-1 text-16 truncate lt-sm:text-8 lt-lg:text-10 lt-md:text-7>
-          Control <span text-brand-primary>your</span> ads
+          {{ t('home.pageTitle[0]') }} <span text-brand-primary>{{ t('home.pageTitle[1]') }}</span> {{ t('home.pageTitle[2]') }}
         </h1>
         <p text-400 lt-sm:text-3>
-          Ads that keep giving
+          {{ t('home.subtitle') }}
         </p>
       </div>
       <div v-if="!isMobile">
         <router-link to="/games">
           <button btn-primary mr-8 lt-md:mr-2 lt-lg:mb-4>
-            games
+            {{ t('games.title') }}
           </button>
         </router-link>
         <router-link to="/charities">
           <button btn-secondary>
-            charities
+            {{ t('charities.title') }}
           </button>
         </router-link>
       </div>

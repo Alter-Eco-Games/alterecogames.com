@@ -1,12 +1,16 @@
 import { createI18n } from 'vue-i18n'
 
-import en from './en.json'
-import ja from './ja.json'
+import enGB from './en-GB.json'
+import jaJP from './ja-JP.json'
 
-export default createI18n({
-  locale: 'en', // changes the current locale shown on screen
+type MessageSchema = typeof enGB
+
+export default createI18n<MessageSchema, 'en-GB' | 'ja-JP'>({
+  locale: 'en-GB', // changes the current locale shown on screen
+  legacy: false,
+  fallbackLocale: 'en-GB',
   messages: {
-    en,
-    ja,
+    'en-GB': enGB,
+    'ja-JP': jaJP,
   },
 })
