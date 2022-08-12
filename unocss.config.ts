@@ -28,14 +28,31 @@ export default defineConfig({
         letter-spacing: 0.${name}em;
       }`
     }],
+    [/^max-ch-(.+)$/, ([, name], { rawSelector }) => {
+      // remove tag end if there
+      if (name.includes('>'))
+        name = name.substring(0, name.length - 1)
+
+      // discard mismatched rules
+      if (/[a-zA-Z]+$/.test(name))
+        return
+
+      const selector = e(rawSelector)
+      // return a string instead of an object
+      return `
+      ${selector} {
+        max-width: ${name}ch;
+      }`
+    }],
   ],
   shortcuts: {
-    'btn-primary': 'bg-brand-primary text-white py-2 px-4 rd-2 min-w-40 shadow-slate shadow-md',
-    'btn-secondary': 'bg-brand-secondary text-white py-2 px-4 rd-2 min-w-40 shadow-slate shadow-md',
+    'btn-primary': 'bg-brand-primary text-white py-2 px-8 rd-2 min-w-40 shadow-slate shadow-md',
+    'btn-secondary': 'bg-brand-secondary text-white py-2 px-8 rd-2 min-w-40 shadow-slate shadow-md',
   },
   theme: {
     colors: {
       400: '#818792',
+      200: '#686E78',
       footer: {
         bg: '#efefef',
         title: '#747A86',
