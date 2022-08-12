@@ -6,7 +6,7 @@ import jaJP from './ja-JP.json'
 type MessageSchema = typeof enGB
 
 export default createI18n<MessageSchema, 'en-GB' | 'ja-JP'>({
-  locale: 'en-GB', // changes the current locale shown on screen
+  locale: window.navigator.language,
   legacy: false,
   fallbackLocale: 'en-GB',
   messages: {

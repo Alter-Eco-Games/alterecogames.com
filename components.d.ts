@@ -13,6 +13,7 @@ declare module '@vue/runtime-core' {
     FooterCol: typeof import('./src/components/footer/footerCol.vue')['default']
     FooterFollow: typeof import('./src/components/footer/footerFollow.vue')['default']
     Highlight: typeof import('./src/components/highlight.vue')['default']
+    LangSwitcher: typeof import('./src/components/navbar/langSwitcher.vue')['default']
     Mobile: typeof import('./src/components/navbar/mobile.vue')['default']
     Navbar: typeof import('./src/components/navbar/navbar.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

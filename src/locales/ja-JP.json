@@ -1,3 +1,66 @@
 {
-  "hello": "こんにちは！"
+    "footer":{
+        "pageTitle":{
+            "main":"alter eco games",
+            "subtitle":"Help and surpport communites by watching ads"
+        },
+        "pageTitles":{
+            "charities":"current charities",
+            "games":"top games",
+            "contact":"contact us",
+            "follow":"follow us"
+        },
+        "copyright":"Alter eco games. all right reserved 2022 - Present"
+    },
+    "home":{
+        "title":"home",
+        "pageTitle":["Control", "your", "ads"],
+        "subtitle":"Ads that keep giving"
+    },
+    "games":{
+        "title":"games"
+    },
+    "about":{
+        "title":"about",
+        "eco":{
+            "title":{
+                "before":"",
+                "highlight":"Eco", 
+                "after":"friendly"
+            },
+            "subtitle":"A portion of the ad revenue go to help planting trees around the world"
+        },
+        "oceans":{
+            "title":{
+                "before":"Help clean up the",
+                "highlight":"Oceans", 
+                "after":""
+            },
+            "subtitle":"The ads you watch also help clean the oceans and the animals that live within."
+        },
+        "world":{
+            "title":{
+                "before":"Support charities", 
+                "highlight":"world", 
+                "after":"wide"
+            },
+            "subtitle":"We care for both animals and humans by watching ads you can help people around the world to."
+        }
+    },
+    "charities":{
+        "title":"charities"
+    },
+    "bugs":{
+        "title":"bugs"
+    },
+    "contact":{
+        "title":"contact"
+    },
+    "404": {
+        "title": "Not Found",
+        "pageTitle":"Page not found"
+    },
+    "WIP": {
+        "pageTitle": "Page under contrustion"
+    }
 }
