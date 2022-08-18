@@ -22,14 +22,14 @@ const isMobile = breakpoints.smaller('sm')
       <div v-if="showForm">
         <img src="../assets/contact-background.svg">
         <div absolute z-2 top-0 flex flex-col left-64 text-200>
-          <h1 mt-16 text-8 font-600 font-serif lsp-1 mb-8>
-            SEND US A <br> MESSGAE
+          <h1 mt-16 text-8 font-600 font-serif lsp-1 mb-8 max-ch-16 uppercase>
+            {{ t('contact.background.title') }}
           </h1>
           <input name="name" placeholder="Type your full name" content-input>
           <input type="email" autocomplete="email" required placeholder="Email address" content-input>
           <textarea content-input h-36 resize-none />
           <button btn-secondary font-bold w-fit ml-a mt-4>
-            SEND TO US!
+            {{ t('contact.background.btn') }}
           </button>
         </div>
       </div>
@@ -37,11 +37,11 @@ const isMobile = breakpoints.smaller('sm')
         <img v-if="isMobile" src="../assets/contact-mobile-background.svg">
         <img v-else src="../assets/contact-foreground.svg">
         <div absolute flex flex-col top-20 left-20 text-white max-ch-30 h-sm lt-sm:left-15>
-          <h1 mb-12 text-6 font-500 font-serif lsp-1>
-            THANKS FOR <br> CONTACTING US
+          <h1 mb-12 text-6 font-500 font-serif lsp-1 max-ch-16 uppercase>
+            {{ t('contact.foreground.title') }}
           </h1>
           <p text-3 mb-6>
-            Here are the rest of the ways you are able to get in contact with us.
+            {{ t('contact.foreground.body') }}
           </p>
           <div flex items-center>
             <div i-mdi-email mr-2 />

@@ -50,11 +50,17 @@
     "charities":{
         "title":"charities"
     },
-    "bugs":{
-        "title":"bugs"
-    },
     "contact":{
-        "title":"contact"
+        "title":"contact",
+        "background":{
+            "title":"send us a message",
+            "btn":"send to us!"
+        },
+        "foreground":{
+            "title":"thanks for contacting us",
+            "body":"Here are the rest of the ways you are able to get in contact with us."
+        }
+
     },
     "404": {
         "title": "Not Found",
