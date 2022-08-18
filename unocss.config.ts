@@ -52,19 +52,17 @@ export default defineConfig({
   },
   theme: {
     colors: {
-      400: '#818792',
       200: '#686E78',
+      300: '#747A86',
+      400: '#818792',
+      500: '#8F949E',
+      600: '#9DA1AA',
+      offWhite: '#efefef',
       test: '#CAE1E8',
       footer: {
-        bg: '#efefef',
-        title: '#747A86',
-        text: '#8F949E',
         b: '#BDBDBD',
-        icons: '#D9D9D9',
       },
       nav: {
-        bg: '#D9D9D9',
-        popup: '#efefef',
         text: '#818792',
       },
       brand: {

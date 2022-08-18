@@ -9,10 +9,10 @@ const games = ['game 1', 'game 2', 'game 3']
 </script>
 
 <template>
-  <footer bg-footer-bg text-footer-text px-24 py-16 pb-8 lt-md:px-8 lt-md:py-4 lt-lg:px-8>
+  <footer bg-offWhite text-500 px-24 py-16 pb-8 lt-md:px-8 lt-md:py-4 lt-lg:px-8>
     <div flex justify-between lt-md:flex-col lt-md:items-start>
       <div>
-        <h1 text-footer-title font-serif lsp-1 text-6 mb-2>
+        <h1 text-300 font-serif lsp-1 text-6 mb-2>
           {{ t('footer.pageTitle.main') }}
         </h1>
         <p text-3>

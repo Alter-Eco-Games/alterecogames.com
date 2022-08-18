@@ -13,7 +13,7 @@ const { routes } = useNavbar(desktopNavRoutes)
           Alter eco
         </router-link>
       </li>
-      <li v-for="route, idx in routes" :key="idx" px-16 text-5 text-nav-text lt-md:px-8>
+      <li v-for="route, idx in routes" :key="idx" px-16 text-5 text-400 lt-md:px-8>
         <router-link :to="route.path" :class="{ 'text-brand-primary': route.active }">
           {{ t(`${route.name}.title`) }}
         </router-link>

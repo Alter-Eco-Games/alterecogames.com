@@ -14,7 +14,7 @@ const icons = ['i-mdi-instagram', 'i-mdi-twitter', 'i-mdi-apple-ios', 'i-mdi-goo
       {{ t('footer.pageTitles.follow') }}
     </h1>
     <div grid grid-rows-2 grid-cols-2 mt-2 text-brand-primary lt-md:grid-cols-4>
-      <a v-for="icon, idx in icons" :key="idx" href="#" m-1 p-4 bg-footer-icons rd-36 flex justify-center items-center>
+      <a v-for="icon, idx in icons" :key="idx" href="#" m-1 p-4 bg-neutral-300 rd-36 flex justify-center items-center>
         <div :class="icon" />
       </a>
     </div>

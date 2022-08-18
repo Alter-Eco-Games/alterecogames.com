@@ -16,9 +16,9 @@ const showIndicator = computed(() => routes.map(route => route.active).some(x =>
 
 <template>
   <div class="navigation">
-    <div flex flex-col h-auto p-8 w-screen z-1 :class="{ 'bg-nav-popup': mobileNavOpen, 'absolute': mobileNavOpen, 'h-screen': mobileNavOpen }">
+    <div flex flex-col h-auto p-8 w-screen z-1 :class="{ 'bg-offWhite': mobileNavOpen, 'absolute': mobileNavOpen, 'h-screen': mobileNavOpen }">
       <div :class="menuIcon" @click="mobileNavOpen = !mobileNavOpen" />
-      <ul v-if="mobileNavOpen" flex flex-col h-screen justify-around items-center font-serif lsp-1 text-nav-text uppercase text-8 font-400>
+      <ul v-if="mobileNavOpen" flex flex-col h-screen justify-around items-center font-serif lsp-1 text-400 uppercase text-8 font-400>
         <li v-for="route in allRoutes" :key="route.path">
           <router-link :to="route.path" @click="mobileNavOpen = false">
             {{ t(`${route.name?.toString()}.title`) }}
