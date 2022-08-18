@@ -5,7 +5,7 @@ const { t } = useI18n()
 const breakpoints = useBreakpoints(breakpointsTailwind)
 
 const charites = ['Ecosia', 'Malaria Consortium', 'SCI Foundation', 'Malaria Consortium']
-const games = ['game 1', 'game 2', 'game 3']
+const games = ['coming soon']
 </script>
 
 <template>
@@ -19,7 +19,7 @@ const games = ['game 1', 'game 2', 'game 3']
           {{ t('footer.pageTitle.subtitle') }}
         </p>
       </div>
-      <FooterCol :title="{ content: t('footer.pageTitles.charities'), link: '/charites' }" :content="charites" lt-md:mt-12 />
+      <FooterCol :title="{ content: t('footer.pageTitles.charities'), link: '/charities' }" :content="charites" lt-md:mt-12 />
       <FooterCol v-if="breakpoints.xl.value" :title="t('footer.pageTitles.games')" :content="games" />
       <FooterCol v-if="breakpoints.md.value" :title="t('footer.pageTitles.contact')" content="alterecogames@gmail.com" />
       <FooterFollow lt-md:mt-12 :show="breakpoints.md.value" />
