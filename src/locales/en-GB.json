@@ -61,6 +61,7 @@
         "pageTitle":"Page not found"
     },
     "WIP": {
-        "pageTitle": "Page under contrustion"
+        "UC": "Page under contrustion",
+        "CS":"Coming Soon!"
     }
 }

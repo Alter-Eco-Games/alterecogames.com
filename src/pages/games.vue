@@ -14,6 +14,6 @@ const { t } = useI18nTitle('games')
 
 <template>
   <div>
-    <WIP />
+    <WIP :title="t('WIP.CS')" />
   </div>
 </template>
