@@ -48,11 +48,13 @@ export default defineConfig({
   shortcuts: {
     'btn-primary': 'bg-brand-primary text-white py-2 px-8 rd-2 min-w-40 shadow-slate shadow-md',
     'btn-secondary': 'bg-brand-secondary text-white py-2 px-8 rd-2 min-w-40 shadow-slate shadow-md',
+    'content-input': 'b-1 b-stone b-rd text-3 py-1 indent-2 bg-transparent min-w-xs m-b-4',
   },
   theme: {
     colors: {
       400: '#818792',
       200: '#686E78',
+      test: '#CAE1E8',
       footer: {
         bg: '#efefef',
         title: '#747A86',
