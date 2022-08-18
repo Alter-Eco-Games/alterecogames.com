@@ -19,8 +19,8 @@ export const mobileNavRoutes: Array<NavRoute> = [
     icon: 'i-carbon-home',
   },
   {
-    name: 'bugs',
-    path: '/bugs',
+    name: 'contact',
+    path: '/contact',
     active: false,
     icon: 'i-carbon-debug',
   },
