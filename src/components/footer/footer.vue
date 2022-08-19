@@ -4,7 +4,15 @@ import { breakpointsTailwind } from '@vueuse/core'
 const { t } = useI18n()
 const breakpoints = useBreakpoints(breakpointsTailwind)
 
-const charites = ['Ecosia', 'Malaria Consortium', 'SCI Foundation', 'Malaria Consortium']
+const charites = [
+  { link: 'https://plant.ecosia.org/', content: 'Ecosia', router: false },
+  { link: 'https://www.malariaconsortium.org/', content: 'Malaria Consortium', router: false },
+  { link: 'https://schistosomiasiscontrolinitiative.org/', content: 'SCI Foundation', router: false },
+  { link: 'https://www.hki.org/', content: 'Helen Keller international', router: false },
+]
+const email = [
+  { link: 'mailto:alterecogames@gmail.com', content: 'alterecogames@gmail.com', router: false },
+]
 const games = ['coming soon']
 </script>
 
@@ -19,9 +27,9 @@ const games = ['coming soon']
           {{ t('footer.pageTitle.subtitle') }}
         </p>
       </div>
-      <FooterCol :title="{ content: t('footer.pageTitles.charities'), link: '/charities' }" :content="charites" lt-md:mt-12 />
+      <FooterCol :title="t('footer.pageTitles.charities')" :content="charites" lt-md:mt-12 />
       <FooterCol v-if="breakpoints.xl.value" :title="t('footer.pageTitles.games')" :content="games" />
-      <FooterCol v-if="breakpoints.md.value" :title="t('footer.pageTitles.contact')" content="alterecogames@gmail.com" />
+      <FooterCol v-if="breakpoints.md.value" :title="t('footer.pageTitles.contact')" :content="email" />
       <FooterFollow lt-md:mt-12 :show="breakpoints.md.value" />
     </div>
     <div text-3 border-t-1 border-t-footer-b mt-24 lt-md:mt-12 lt-md:mb-8 lt-sm:mb-24>

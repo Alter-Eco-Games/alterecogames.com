@@ -46,7 +46,7 @@ export default defineConfig({
     }],
   ],
   shortcuts: {
-    'btn': 'text-white py-2 px-8 rd-2 min-w-40 shadow-slate shadow-md transition-transform',
+    'btn': 'text-white py-2 px-8 rd-2 min-w-40 shadow-slate shadow-md transition-5 transition-transform',
     'content-input': 'b-1 b-stone b-rd text-3 py-1 indent-2 bg-transparent min-w-xs m-b-4',
   },
   theme: {

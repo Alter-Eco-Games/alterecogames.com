@@ -2,6 +2,7 @@
 interface item {
   content: string
   link: string
+  router: boolean
 }
 
 interface Props {
@@ -10,6 +11,8 @@ interface Props {
 }
 
 const props = defineProps<Props>()
+
+// target="_blank" rel="noopener noreferrer"
 </script>
 
 <template>
@@ -17,9 +20,12 @@ const props = defineProps<Props>()
     <h1 v-if="typeof title == 'string'" uppercase lsp-1 text-3>
       {{ title }}
     </h1>
-    <router-link v-else :to="title.link" uppercase lsp-1 text-3>
+    <router-link v-else-if="title.router" :to="title.link" uppercase lsp-1 text-3>
       {{ title.content }}
     </router-link>
+    <a v-else :href="title.link" target="_blank" rel="noopener noreferrer">
+      {{ title.content }}
+    </a>
 
     <p v-if="typeof content == 'string'" text-3 mt-2>
       {{ content }}
@@ -29,9 +35,12 @@ const props = defineProps<Props>()
         <p v-if="typeof obj == 'string'">
           {{ obj }}
         </p>
-        <router-link v-else :to="obj.link">
+        <router-link v-else-if="obj.router" :to="obj.link">
           {{ obj.content }}
         </router-link>
+        <a v-else :href="obj.link" target="_blank" rel="noopener noreferrer">
+          {{ obj.content }}
+        </a>
       </li>
     </ul>
   </div>
