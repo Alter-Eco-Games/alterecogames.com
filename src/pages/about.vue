@@ -13,15 +13,15 @@ import { useI18nTitle } from '~/composables'
 const sections = [
   {
     path: 'about.eco',
-    image: 'src/assets/environment.svg',
+    image: '../assets/environment.svg',
   },
   {
     path: 'about.oceans',
-    image: 'src/assets/fish-bowl.svg',
+    image: '../assets/fish-bowl.svg',
   },
   {
     path: 'about.world',
-    image: 'src/assets/connected-world.svg',
+    image: '../assets/connected-world.svg',
   },
 ]
 const { t } = useI18nTitle('about')
