@@ -30,22 +30,22 @@ const isMobile = breakpoints.smaller('sm')
       </div>
       <div v-if="!isMobile">
         <router-link to="/games">
-          <button btn-primary mr-8 lt-md:mr-2 lt-lg:mb-4>
+          <Button mr-8 lt-md:mr-2 lt-lg:mb-4>
             {{ t('games.title') }}
-          </button>
+          </Button>
         </router-link>
         <router-link to="/charities">
-          <button btn-secondary>
+          <Button secondary>
             {{ t('charities.title') }}
-          </button>
+          </Button>
         </router-link>
       </div>
     </div>
     <img src="../assets/helping.svg" w-a lt-xl:w-sm lt-lg:w-xs lt-sm:mb-30>
     <router-link v-if="isMobile" to="/charities">
-      <button btn-secondary px-28 py-4>
+      <Button secondary px-28 py-4>
         charities
-      </button>
+      </Button>
     </router-link>
   </div>
 </template>

@@ -28,9 +28,9 @@ const isMobile = breakpoints.smaller('sm')
           <input name="name" placeholder="Type your full name" content-input>
           <input type="email" autocomplete="email" required placeholder="Email address" content-input>
           <textarea content-input h-36 resize-none />
-          <button btn-secondary font-bold w-fit ml-a mt-4>
+          <Button font-bold w-fit ml-a mt-4>
             {{ t('contact.background.btn') }}
-          </button>
+          </Button>
         </div>
       </div>
       <div absolute flex top-40 right--50 lt-xl:right--30 lt-lg="relative top-0 right-0">

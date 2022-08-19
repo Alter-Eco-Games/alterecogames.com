@@ -38,9 +38,9 @@ const isMobile = breakpoints.smaller('sm')
       lt-sm="flex-col flex-col-reverse mt-10"
     >
       <router-link v-if="isMobile && idx === 0" to="/">
-        <button btn-secondary text-5 px-12 py-4>
+        <Button secondary text-5 px-12 py-4>
           view tree counter
-        </button>
+        </Button>
       </router-link>
       <img :src="section.image" w-3xl lt-sm="mb-28" lt-xl:w-xl lt-lg:w-md lt-md:w-xs :class="{ 'lt-sm:mr-a': idx === 0 }">
       <div mx-auto :class="{ 'lt-sm:px-8 lt-sm:px-8': idx === 0 }">
@@ -49,9 +49,9 @@ const isMobile = breakpoints.smaller('sm')
           {{ t(`${section.path}.subtitle`) }}
         </p>
         <router-link v-if="!isMobile && idx === 0" to="/">
-          <button btn-secondary>
+          <Button secondary>
             view tree counter
-          </button>
+          </Button>
         </router-link>
       </div>
     </section>
