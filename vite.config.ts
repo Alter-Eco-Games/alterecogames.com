@@ -1,6 +1,7 @@
 import path from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import svgLoader from 'vite-svg-loader'
 import Pages from 'vite-plugin-pages'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -17,6 +18,10 @@ export default defineConfig({
   plugins: [
     vue({
       reactivityTransform: true,
+    }),
+    // https://www.npmjs.com/package/vite-svg-loader
+    svgLoader({
+      defaultImport: 'url',
     }),
     // https://github.com/hannoeru/vite-plugin-pages
     Pages(),

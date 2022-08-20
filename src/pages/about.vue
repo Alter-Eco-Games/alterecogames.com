@@ -8,20 +8,23 @@
 
 <script setup lang="ts">
 import { breakpointsTailwind } from '@vueuse/core'
+import ecoImage from '../assets/environment.svg?url'
+import oceansImage from '../assets/fish-bowl.svg?url'
+import humanImage from '../assets/connected-world.svg?url'
 import { useI18nTitle } from '~/composables'
 
 const sections = [
   {
     path: 'about.eco',
-    image: '/assets/environment.svg',
+    image: ecoImage,
   },
   {
     path: 'about.oceans',
-    image: '/assets/fish-bowl.svg',
+    image: oceansImage,
   },
   {
     path: 'about.world',
-    image: '/assets/connected-world.svg',
+    image: humanImage,
   },
 ]
 const { t } = useI18nTitle('about')

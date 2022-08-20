@@ -9,6 +9,7 @@
 
 <script setup lang="ts">
 import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'
+import helpingSVG from '../assets/helping.svg?url'
 import { useI18nTitle } from '~/composables'
 
 const { t } = useI18nTitle('home')
@@ -41,7 +42,7 @@ const isMobile = breakpoints.smaller('sm')
         </router-link>
       </div>
     </div>
-    <img src="../assets/helping.svg" w-a lt-xl:w-sm lt-lg:w-xs lt-sm:mb-30>
+    <img :src="helpingSVG" w-a lt-xl:w-sm lt-lg:w-xs lt-sm:mb-30>
     <router-link v-if="isMobile" to="/charities">
       <Button secondary px-28 py-4>
         charities

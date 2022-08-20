@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import WIPSVG from '../assets/WIP.svg?url'
 interface Props {
   title?: string
 }
@@ -11,6 +12,6 @@ const { t } = useI18n()
     <h2 lsp-1 font-serif text-8 mb-16 lt-sm:text-6>
       {{ title ?? t('WIP.UC') }}
     </h2>
-    <img src="../assets/WIP.svg" w-3xl>
+    <img :src="WIPSVG" w-3xl>
   </div>
 </template>
