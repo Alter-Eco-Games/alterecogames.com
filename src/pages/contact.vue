@@ -23,21 +23,6 @@ const isMobile = breakpoints.smaller('sm')
         <img src="../assets/contact-background.svg">
         <div absolute z-2 top-0 flex flex-col left-64 text-200>
           <h1 mt-16 text-8 font-600 font-serif lsp-1 mb-8 max-ch-16 uppercase>
-            {{ t('contact.background.title') }}
-          </h1>
-          <input name="name" placeholder="Type your full name" content-input>
-          <input type="email" autocomplete="email" required placeholder="Email address" content-input>
-          <textarea content-input h-36 resize-none />
-          <Button font-bold w-fit ml-a mt-4>
-            {{ t('contact.background.btn') }}
-          </Button>
-        </div>
-      </div>
-      <div absolute flex top-40 right--50 lt-xl:right--30 lt-lg="relative top-0 right-0">
-        <img v-if="isMobile" src="../assets/contact-mobile-background.svg">
-        <img v-else src="../assets/contact-foreground.svg">
-        <div absolute flex flex-col top-20 left-20 text-white max-ch-30 h-sm lt-sm:left-15>
-          <h1 mb-12 text-6 font-500 font-serif lsp-1 max-ch-16 uppercase>
             {{ t('contact.foreground.title') }}
           </h1>
           <p text-3 mb-6>
@@ -50,10 +35,10 @@ const isMobile = breakpoints.smaller('sm')
             </p>
           </div>
           <div flex mt-a justify-around text-test>
-            <div i-mdi-twitter />
-            <div i-mdi-instagram />
-            <div i-mdi-apple-ios />
-            <div i-mdi-google-play />
+            <a i-mdi-twitter href="https://twitter.com/alterecogames" target="_blank" hover:text-white />
+            <a i-mdi-instagram href="https://www.instagram.com/alterecogames/" target="_blank" hover:text-white />
+            <a i-fa6-brands-tiktok href="https://www.tiktok.com/@alter_eco_games" target="_blank" hover:text-white />
+            <a i-mdi-google-play href="https://play.google.com/store/apps/dev?id=8733232126626935186" target="_blank" hover:text-white />
           </div>
         </div>
       </div>

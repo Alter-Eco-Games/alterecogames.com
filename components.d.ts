@@ -9,6 +9,7 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Button: typeof import('./src/components/Button.vue')['default']
     Desktop: typeof import('./src/components/navbar/desktop.vue')['default']
+    Follow: typeof import('./src/components/follow.vue')['default']
     Footer: typeof import('./src/components/footer/footer.vue')['default']
     FooterCol: typeof import('./src/components/footer/footerCol.vue')['default']
     FooterFollow: typeof import('./src/components/footer/footerFollow.vue')['default']
